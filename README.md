@@ -17,6 +17,7 @@ $ yarn install
 
 ```bash
 # development
+$ docker-compose up -d
 $ yarn start
 
 # watch mode
@@ -26,10 +27,32 @@ $ yarn start:dev
 $ yarn start:prod
 ```
 
+## Migration commands
+```bash
+# Create new empty migration
+$ migration:create <migration_name>
+
+# Generate new migration based on entity
+$ migration:generate <migration_name>
+
+# Apply all cerated migrations
+$ migration:run
+
+# Rollback executed migrations. Migration files should be removed after rollback
+$ migration:down
+```
+
+## Postgres commands
+```bash
+> psql -U root -d db_nest_users
+> \dt
+```
+
 ## Completed Tasks
-- [ ] Setup Nest app
-- [ ] Install Typeorm
-- [ ] Setup Postgres with Docker
-- [ ] Connect to Postgres
-- [ ] Create User entity
-- [ ] Create few migrations
+- [x] Setup Nest app
+- [x] Install Typeorm
+- [x] Setup Postgres with Docker
+- [x] Connect to Postgres
+- [x] Create User entity
+- [x] Create few migrations
+- [ ] CRUD operations for User entity with Typeorm
