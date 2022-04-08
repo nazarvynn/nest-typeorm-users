@@ -1,9 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-enum Gender {
-  MALE,
-  FEMALE,
-}
+import { Gender } from '../enums';
 
 @Entity('users') // Table name
 export class User {
